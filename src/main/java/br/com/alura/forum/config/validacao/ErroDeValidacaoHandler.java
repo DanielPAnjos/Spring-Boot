@@ -34,9 +34,4 @@ public class ErroDeValidacaoHandler {
 		return dto;
 	}
 	
-	@ResponseStatus(code = HttpStatus.NOT_FOUND)
-	@ExceptionHandler(NoSuchElementException.class)
-	public ErroDeBuscaDto handle(NoSuchElementException exception) {		
-		return new ErroDeBuscaDto(exception.getMessage()) ;
-	}
 }
